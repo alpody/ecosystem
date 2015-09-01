@@ -29,6 +29,25 @@ Plugin 'majutsushi/tagbar'
 "Plugin 'xolox/vim-misc'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'alvan/vim-php-manual'
+Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Shougo/vimshell.vim'
+Plugin 'Valloric/MatchTagAlways'
+Plugin 'pangloss/vim-javascript'
+Plugin 'elzr/vim-json'
+Plugin '2072/PHP-Indenting-for-VIm'
+Plugin '2072/vim-syntax-for-PHP'
+Plugin 'othree/html5.vim'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'mbbill/undotree'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-repeat'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'chrisbra/csv.vim'
 " Git plugin not hosted on GitHub
 "Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
@@ -54,6 +73,17 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+
+set lazyredraw
+
+
+set expandtab
+
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowb
+set noswapfile
+
 syntax enable
 "set background=light
 "colorscheme  cascadia 
@@ -65,6 +95,19 @@ set shiftwidth=4
 set smarttab
 set expandtab
 set smartindent
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:airline_theme ="hybridline"
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_php_checkers=['php', 'phpcs']
+let g:syntastic_php_phpcs_exec='~/.composer/vendor/bin/phpcs'
+let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
+
 let g:ctrlp_extensions=['tag','buffertag']
 nmap <ESC>b :TagbarToggle<CR>
 nmap <ESC>t :NERDTreeToggle<CR>
