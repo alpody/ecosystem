@@ -53,7 +53,8 @@ Plugin 'tomtom/tlib_vim'
 
 Plugin 'tobyS/vmustache'
 Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+Plugin 'alpody/vim-snippets'
+
 Plugin 'tobyS/pdv'
 
 " Git plugin not hosted on GitHub
@@ -116,14 +117,18 @@ let g:syntastic_php_checkers=['php', 'phpcs']
 let g:syntastic_php_phpcs_exec='~/.composer/vendor/bin/phpcs'
 let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
 
+let g:snips_author='Alexey B. Podyapolsky (alpody@yandex.ru)'
+
+"NERDTree directory color
+hi Directory ctermfg=6 ctermbg=0 
 
 let g:ctrlp_extensions=['tag','buffertag']
 nmap <ESC>b :TagbarToggle<CR>
 nmap <ESC>t :NERDTreeToggle<CR>
 
-let g:UltiSnipsExpandTrigger="<c-t>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-n>"
+let g:UltiSnipsExpandTrigger="<c-h>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 " If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"
