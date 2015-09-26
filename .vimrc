@@ -57,6 +57,10 @@ Plugin 'alpody/vim-snippets'
 
 Plugin 'tobyS/pdv'
 
+Bundle 'joonty/vdebug.git'
+
+Bundle 'stephpy/vim-php-cs-fixer'
+
 " Git plugin not hosted on GitHub
 "Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
@@ -86,7 +90,6 @@ filetype plugin indent on    " required
 set lazyredraw
 
 
-set expandtab
 
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
@@ -119,8 +122,19 @@ let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
 
 let g:snips_author='Alexey B. Podyapolsky (alpody@yandex.ru)'
 
+" If php-cs-fixer is in $PATH, you don't need to define line below
+" let g:php_cs_fixer_path = "~/php-cs-fixer.phar" " define the path to the php-cs-fixer.phar
+let g:php_cs_fixer_level = "symfony"              " which level ?
+let g:php_cs_fixer_config = "default"             " configuration
+let g:php_cs_fixer_php_path = "php"               " Path to PHP
+" If you want to define specific fixers:
+"let g:php_cs_fixer_fixers_list = "linefeed,short_tag,indentation"
+let g:php_cs_fixer_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
+let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option
+let g:php_cs_fixer_verbose = 0                    " Return the output of command if 1, else an inline information.
+
 "NERDTree directory color
-hi Directory ctermfg=6 ctermbg=0 
+"hi Directory ctermfg=6 ctermbg=0 
 
 let g:ctrlp_extensions=['tag','buffertag']
 nmap <ESC>b :TagbarToggle<CR>
