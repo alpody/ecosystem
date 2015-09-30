@@ -61,6 +61,8 @@ Bundle 'joonty/vdebug.git'
 
 Bundle 'stephpy/vim-php-cs-fixer'
 
+Plugin 'easymotion/vim-easymotion'
+
 " Git plugin not hosted on GitHub
 "Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
@@ -85,7 +87,7 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
+au BufNewFile,BufRead *.phtml set filetype=php
 
 set lazyredraw
 
@@ -116,7 +118,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_php_checkers=['php', 'phpcs']
+let g:syntastic_php_checkers=['php', 'phpcs','phtml']
 let g:syntastic_php_phpcs_exec='~/.composer/vendor/bin/phpcs'
 let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
 
