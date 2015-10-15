@@ -120,7 +120,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_php_checkers=['php', 'phpcs','phtml']
 let g:syntastic_php_phpcs_exec='~/.composer/vendor/bin/phpcs'
-let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
+let g:syntastic_php_phpcs_args='--standard=~/projects/ecosystem.git/psr2-light.xml -n'
 
 let g:snips_author='Alexey B. Podyapolsky (alpody@yandex.ru)'
 
