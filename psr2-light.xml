@@ -6,6 +6,9 @@
 <!--Exclude error "Each class must be in a namespace of at least one level"-->
 <!--(a top-level vendor name)-->
         <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+<!--Class name "Domain_CollectionFactory" is not in camel caps format-->
+        <exclude name="Squiz.Classes.ValidClassName.NotCamelCaps"/>
+
     </rule>
     ...
 </ruleset>

@@ -46,6 +46,7 @@ Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'benmills/vimux'
 Plugin 'chrisbra/csv.vim'
 
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -62,6 +63,9 @@ Bundle 'joonty/vdebug.git'
 Bundle 'stephpy/vim-php-cs-fixer'
 
 Plugin 'easymotion/vim-easymotion'
+
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " Git plugin not hosted on GitHub
 "Plugin 'git://git.wincent.com/command-t.git'
@@ -109,10 +113,12 @@ set shiftwidth=4
 set smarttab
 set expandtab
 set smartindent
-
+let mapleader=" "
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:airline_left_sep='►'
+let g:airline_right_sep='◄'
 let g:airline_theme ="hybridline"
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -151,3 +157,25 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 nnoremap  \d :call pdv#DocumentWithSnip()<CR>
 nmap <ESC>u :UndotreeToggle<cr>
+
+" toggle color scheme
+nmap <ESC>cb :colorscheme blue<cr>
+nmap <ESC>cd :colorscheme default<cr>
+
+" change file format
+nmap <ESC>ffu :set ff=unix<cr>
+nmap <ESC>ffd :set ff=dos<cr>
+
+" changes file encoding
+nmap <ESC>feu :set fenc=utf-8<cr>
+nmap <ESC>few :set fenc=cp-1251<cr>
+
+" parameter for Markdown modules
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_level = 3
+"let g:vim_markdown_no_default_key_mappings = 1
+let g:vim_markdown_toc_autofit = 1
+let g:vim_markdown_emphasis_multiline = 0
+"let g:vim_markdown_conceal = 0
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+nmap <ESC>nh :nohlsearch<cr>
