@@ -67,6 +67,7 @@ Plugin 'easymotion/vim-easymotion'
 
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'mhinz/vim-signify'
 
 " Git plugin not hosted on GitHub
 "Plugin 'git://git.wincent.com/command-t.git'
@@ -121,6 +122,8 @@ set statusline+=%*
 let g:airline_left_sep='►'
 let g:airline_right_sep='◄'
 let g:airline_theme ="hybridline"
+let g:airline#extensions#tabline#enabled = 1
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -180,3 +183,6 @@ let g:vim_markdown_emphasis_multiline = 0
 "let g:vim_markdown_conceal = 0
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 nmap <ESC>nh :nohlsearch<cr>
+nmap <ESC>pa :set paste<cr>
+nmap <ESC>npa :set nopaste<cr>
+nmap <SPACE>gs :Gstatus<cr>
