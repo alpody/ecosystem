@@ -150,8 +150,8 @@ let g:php_cs_fixer_verbose = 0                    " Return the output of command
 "hi Directory ctermfg=6 ctermbg=0 
 
 let g:ctrlp_extensions=['tag','buffertag']
-nmap <ESC>b :TagbarToggle<CR>
-nmap <ESC>t :NERDTreeToggle<CR>
+nmap <SPACE>b :TagbarToggle<CR>
+nmap <SPACE>t :NERDTreeToggle<CR>
 
 let g:UltiSnipsExpandTrigger="<c-h>"
 let g:UltiSnipsJumpForwardTrigger="<c-n>"
@@ -161,19 +161,19 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 " let g:UltiSnipsEditSplit="vertical"
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 nnoremap  \d :call pdv#DocumentWithSnip()<CR>
-nmap <ESC>u :UndotreeToggle<cr>
+nmap <SPACE>u :UndotreeToggle<cr>
 
 " toggle color scheme
 nmap <ESC>cb :colorscheme blue<cr>
 nmap <ESC>cd :colorscheme default<cr>
 
 " change file format
-nmap <ESC>ffu :set ff=unix<cr>
-nmap <ESC>ffd :set ff=dos<cr>
+nmap <SPACE>ffu :set ff=unix<cr>
+nmap <SPACE>ffd :set ff=dos<cr>
 
 " changes file encoding
-nmap <ESC>feu :set fenc=utf-8<cr>
-nmap <ESC>few :set fenc=cp-1251<cr>
+nmap <SPACE>feu :set fenc=utf-8<cr>
+nmap <SPACE>few :set fenc=cp-1251<cr>
 
 " parameter for Markdown modules
 let g:vim_markdown_folding_disabled = 1
@@ -183,7 +183,7 @@ let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_emphasis_multiline = 0
 "let g:vim_markdown_conceal = 0
 autocmd BufNewFile,BufRead *.md set filetype=markdown
-nmap <ESC>nh :nohlsearch<cr>
-nmap <ESC>pa :set paste<cr>
-nmap <ESC>npa :set nopaste<cr>
+nmap <SPACE>nh :nohlsearch<cr>
+nmap <SPACE>pa :set paste<cr>
+nmap <SPACE>npa :set nopaste<cr>
 nmap <SPACE>gs :Gstatus<cr>
