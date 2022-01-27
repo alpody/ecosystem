@@ -89,7 +89,7 @@ MODE_INDICATOR="%F{yellow}+%f"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( ag aliases alias-finder branch colored-man-pages colorize composer dirhistory dnf docker docker-compose dotenv git golang gulp history httpie kubectl kubectx man npm tig tmux yum yarn zsh-syntax-highlighting vi-mode)
+plugins=( ag aliases alias-finder branch colored-man-pages colorize composer dirhistory dnf docker docker-compose dotenv git golang gulp history httpie kubectl kubectx man npm tig tmux yum yarn zsh-autosuggestions zsh-syntax-highlighting vi-mode)
 
 
 source $ZSH/oh-my-zsh.sh
