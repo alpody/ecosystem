@@ -84,6 +84,9 @@ VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 VI_MODE_SET_CURSOR=true
 MODE_INDICATOR="%F{yellow}+%f"
 
+# Disable magic function 
+DISABLE_MAGIC_FUNCTIONS=true
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
