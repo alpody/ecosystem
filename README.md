@@ -10,7 +10,7 @@
 
 - [ZSH - shell for interactive using ](https://www.zsh.org/) 
 - [oh-my-zsh - ZSH configuration framework](https://ohmyz.sh/)
-- 
+- run commands for [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) and [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) modules 
 ```console
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 
